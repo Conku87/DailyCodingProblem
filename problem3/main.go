@@ -38,7 +38,7 @@ type Node struct {
 }
 
 func main() {
-	node := Node{Val: "roo\\\"t", Left: &Node{Val: "left", Left: &Node{Val: "left.left"}}, Right: &Node{Val: "right"}}
+	node := Node{Val: "root", Left: &Node{Val: "left", Left: &Node{Val: "left.left"}}, Right: &Node{Val: "right"}}
 	serializedNode := serialize(&node)
 	fmt.Println(deserialize(serializedNode).Left.Left.Val)
 }
